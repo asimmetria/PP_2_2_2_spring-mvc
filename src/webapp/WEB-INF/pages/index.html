@@ -3,13 +3,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Index of cars</title>
 </head>
 <body>
-<div>
+<table>
+
     <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
+        <p th:text="${msg}"></p>
     </th:block>
-</div>
+</table>
+
 </body>
 </html>
