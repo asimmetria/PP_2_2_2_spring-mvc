@@ -6,9 +6,6 @@ public class Car {
     private int series;
     private String country;
 
-    public Car() {
-    }
-
     public Car(String name, int series, String country) {
         this.name = name;
         this.series = series;
