@@ -21,7 +21,7 @@ public class CarController {
     @GetMapping()
     public String index(@RequestParam(value = "count", required = false, defaultValue = "-1") int count,
                         Model model) {
-        if ((carService.getAmount() != count) && (count != -1)) {
+        if (count != -1) {
             model.addAttribute("cars", carService.getCountItems(count));
         } else {
             model.addAttribute("cars", carService.getCountItems(carService.getAmount()));
