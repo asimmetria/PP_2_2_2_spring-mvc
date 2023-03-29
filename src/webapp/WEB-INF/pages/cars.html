@@ -9,21 +9,21 @@
 <div >
     <table style="text-align: center; border: 10px blue solid; align: center;  min-width:100%;">
         <tr>
-            <th>Name</th>
-            <th>Series</th>
-            <th>Country</th>
+            <th style="border: 5px blue solid;">Name</th>
+            <th style="border: 5px blue solid;">Series</th>
+            <th style="border: 5px blue solid;">Country</th>
         </tr>
         <th:block th:each="car : ${cars}">
             <tr>
-                <td th:text="${car.getName()}">
+                <td th:text="${car.getName()}" style="border: 3px blue solid;">
                     name
                 </td>
 
-                <td th:text="${car.getSeries()}">
+                <td th:text="${car.getSeries()}" style="border: 3px blue solid;">
                     series
                 </td>
 
-                <td th:text="${car.getCountry()}">
+                <td th:text="${car.getCountry()}" style="border: 3px blue solid;">
                     country
                 </td>
             </tr>
