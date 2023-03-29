@@ -9,20 +9,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CarService {
+public class CarService implements ItemService<Car> {
     private CarDAO carDAO;
+
     @Autowired
     public CarService(CarDAO carDAO) {
         this.carDAO = carDAO;
     }
+
+    @Override
     public int getAmount() {
-        return carDAO.getCars().size();
+        return carDAO.getItems().size();
     }
-    public List<Car> getCountCars(int count) {
+
+    @Override
+    public List<Car> getCountItems(int count) {
         List<Car> selectedCars = new ArrayList<>();
         for (int i = 0; i < count; i++) {
-            if (i < carDAO.getCars().size()) {
-                selectedCars.add(carDAO.getCars().get(i));
+            if (i < carDAO.getItems().size()) {
+                selectedCars.add(carDAO.getItems().get(i));
             } else {
                 break;
             }

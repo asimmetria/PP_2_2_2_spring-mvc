@@ -22,9 +22,9 @@ public class CarController {
     public String index(@RequestParam(value = "count", required = false, defaultValue = "0") int count,
                         Model model) {
         if ((carService.getAmount() != count) && (count != 0)) {
-            model.addAttribute("cars", carService.getCountCars(count));
+            model.addAttribute("cars", carService.getCountItems(count));
         } else {
-            model.addAttribute("cars", carService.getCountCars(carService.getAmount()));
+            model.addAttribute("cars", carService.getCountItems(carService.getAmount()));
         }
         return "cars";
     }

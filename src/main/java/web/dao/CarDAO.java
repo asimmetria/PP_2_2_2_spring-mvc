@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class CarDAO {
+public class CarDAO implements ItemDAO<Car> {
     private List<Car> cars;
 
     {
@@ -21,7 +21,8 @@ public class CarDAO {
 
     }
 
-    public List<Car> getCars() {
+    @Override
+    public List<Car> getItems() {
         return cars;
     }
 }
